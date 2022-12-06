@@ -1,15 +1,18 @@
 #include<stdio.h>
-void main()
+
+int main()
 {
-	int i , a[5];
-	for(i=1;i<=5;i++)
+	int n1=0,n2=1,n3,i,number;
+	
+	printf("Enter the number of elements : ");
+	scanf("%d",&number);
+	printf("\n%d\t%d",n1,n2);
+	for(i=2;i<=number;++i)
 	{
-		printf(" Enter no.[%d] : ",i);
-		scanf("%d",&a[i]);
+		n3=n1+n2;
+		printf("\t%d",n3);
+		n1=n2;
+		n2=n3;	
 	}
-	printf("\n");
-	for(i=1;i<=5;i++)
-	{
-		printf("%d\t",a[i]);
-	}
+	return 0;
 }
